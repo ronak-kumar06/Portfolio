@@ -1,4 +1,11 @@
-User-agent: *
-Allow: /
+import { MetadataRoute } from 'next';
 
-Sitemap: https://ronakkumar.dev/sitemap.xml
+export default function robots(): MetadataRoute.Robots {
+  return {
+    rules: {
+      userAgent: '*',
+      allow: '/',
+    },
+    sitemap: 'https://ronakkumar.dev/sitemap.xml',
+  };
+}

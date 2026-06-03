@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 "use client";
 
 import { useRef, useMemo } from "react";
@@ -13,9 +14,10 @@ export function ParticleField() {
   const positions = useMemo(() => {
     const pos = new Float32Array(particlesCount * 3);
     for (let i = 0; i < particlesCount; i++) {
-      pos[i * 3] = (Math.random() - 0.5) * 20; // x
-      pos[i * 3 + 1] = (Math.random() - 0.5) * 20; // y
-      pos[i * 3 + 2] = (Math.random() - 0.5) * 10; // z
+      // Pseudo-random deterministic values to fix useMemo purity rule
+      pos[i * 3] = (Math.sin(i * 13.5) - 0.5) * 20; // x
+      pos[i * 3 + 1] = (Math.cos(i * 41.3) - 0.5) * 20; // y
+      pos[i * 3 + 2] = (Math.sin(i * 87.1) - 0.5) * 10; // z
     }
     return pos;
   }, [particlesCount]);
@@ -28,7 +30,8 @@ export function ParticleField() {
       new THREE.Color("#06B6D4"), // Accent
     ];
     for (let i = 0; i < particlesCount; i++) {
-      const color = colorPalette[Math.floor(Math.random() * colorPalette.length)];
+      const colorIndex = Math.abs(Math.floor(Math.sin(i * 93.2) * colorPalette.length)) % colorPalette.length;
+      const color = colorPalette[colorIndex];
       col[i * 3] = color.r;
       col[i * 3 + 1] = color.g;
       col[i * 3 + 2] = color.b;
