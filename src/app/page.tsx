@@ -5,7 +5,8 @@ import { CursorGlow } from "@/components/ui/CursorGlow";
 import LoadingScreen from "@/components/ui/LoadingScreen";
 
 import { Hero } from "@/components/sections/Hero";
-import { About } from "@/components/sections/About";
+import { Education } from "@/components/sections/Education";
+import { AcademicHighlights } from "@/components/sections/AcademicHighlights";
 import { Skills } from "@/components/sections/Skills";
 import { CompetitiveProgramming } from "@/components/sections/CompetitiveProgramming";
 import { Projects } from "@/components/sections/Projects";
@@ -30,7 +31,8 @@ export default function Home() {
       {/* Page Content */}
       <div className="relative z-10 flex flex-col gap-0 md:gap-12">
         <Hero />
-        <About />
+        <Education />
+        <AcademicHighlights />
         <Skills />
         <CompetitiveProgramming />
         <Projects />

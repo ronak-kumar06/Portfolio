@@ -28,7 +28,7 @@ export const METRICS = [
 // ========== NAVIGATION ==========
 export const NAV_LINKS = [
   { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
+  { label: "Education", href: "#education" },
   { label: "Skills", href: "#skills" },
   { label: "CP", href: "#competitive-programming" },
   { label: "Projects", href: "#projects" },
@@ -36,18 +36,37 @@ export const NAV_LINKS = [
 ];
 
 // ========== EDUCATION ==========
-export const EDUCATION = {
-  institution: "Indian Institute of Technology Roorkee",
-  degree: "B.Tech Civil Engineering",
-  cgpa: "7.39",
-  focusAreas: [
-    "Software Development",
-    "Data Structures & Algorithms",
-    "Machine Learning",
-    "Quantitative Finance",
-    "System Design",
-  ],
-};
+export const EDUCATION_TIMELINE = [
+  {
+    institution: "Indian Institute of Technology Roorkee",
+    degree: "B.Tech Civil Engineering",
+    score: "CGPA: 7.39",
+    duration: "2023 - 2026",
+    highlights: [
+      "Data Structures & Algorithms",
+      "Software Development",
+      "Machine Learning",
+      "Competitive Programming",
+    ],
+    icon: "GraduationCap",
+  },
+  {
+    institution: "Tagore Public School, Surajgarh (CBSE)",
+    degree: "Class XII",
+    score: "Percentage: 87.60%",
+    duration: "2023",
+    highlights: [],
+    icon: "GraduationCap",
+  },
+  {
+    institution: "Jawahar Navodaya Vidyalaya, Kajra (CBSE)",
+    degree: "Class X",
+    score: "Percentage: 92.40%",
+    duration: "2021",
+    highlights: [],
+    icon: "Award",
+  },
+];
 
 // ========== SKILLS ==========
 export interface Skill {
